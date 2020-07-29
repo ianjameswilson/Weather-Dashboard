@@ -1,5 +1,5 @@
 # Weather-Dashboard
-![](images/Weather-Dashboard.png)
+![](Images/Weather-Dashboard.png)
 
 https://ianjameswilson.github.io/Weather-Dashboard/
 
