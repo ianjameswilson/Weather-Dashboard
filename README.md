@@ -1,4 +1,7 @@
 # Weather-Dashboard
+![](Images/Weather-Dashboard.png)
+
+https://ianjameswilson.github.io/Weather-Dashboard/
 
 User Story:
 AS A traveler
