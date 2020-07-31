@@ -21,7 +21,7 @@ $(document).ready(function() {
     function cityWeather(city) {
         $.ajax ({
             
-            url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=1d140af8cbf6d4a0a9813769986f988f",
+            url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=1d140af8cbf6d4a0a9813769986f988f",
             method: "GET",   
             success: function(data){
                 // save city searched
@@ -62,7 +62,7 @@ $(document).ready(function() {
     function cityForecast(city) {
         $.ajax({
             
-            url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=1d140af8cbf6d4a0a9813769986f988f",
+            url: "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&appid=1d140af8cbf6d4a0a9813769986f988f",
             method: "GET",      
             success: function(data){
                 // overwrite existing content with title and empty row
@@ -78,8 +78,8 @@ $(document).ready(function() {
                         var card = $("<div>").addClass("card bg-primary text-white");
                         var body = $("<div>").addClass("card-body p-2");
                         var title = $("<h4>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
-                        var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
-                        var p1 = $("<p>").addClass("card-text").text("Temperature: " + data.list[i].main.temp + "°F");
+                        var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
+                        var p1 = $("<p>").addClass("card-text").text("Temperature: " + data.list[i].main.temp + " °F");
                         var p2 = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity + "%");
 
                         // add to page
@@ -95,7 +95,7 @@ $(document).ready(function() {
     function uvIndex(lat, lon) {
         $.ajax ({
              
-            url: "https://api.openweathermap.org/data/2.5/uvi?appid=1d140af8cbf6d4a0a9813769986f988f&lat=" + lat + "&lon=" + lon,
+            url: "http://api.openweathermap.org/data/2.5/uvi?appid=1d140af8cbf6d4a0a9813769986f988f&lat=" + lat + "&lon=" + lon,
             method: "GET",
             success: function(data) {
                 var uv = $("<p>").text("UV Index: ");
